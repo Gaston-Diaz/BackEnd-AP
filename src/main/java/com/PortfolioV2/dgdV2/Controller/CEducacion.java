@@ -81,9 +81,9 @@ public class CEducacion {
         if(!sEducacion.existsById(id)){
             return new ResponseEntity(HttpStatus.NOT_FOUND);
         }
-        if(sEducacion.existsByNombreE(dtoeducacion.getNombreE()) && sEducacion.getByNombreE(dtoeducacion.getNombreE()).get().getId() != id){
+       /* if(sEducacion.existsByNombreE(dtoeducacion.getNombreE()) && sEducacion.getByNombreE(dtoeducacion.getNombreE()).get().getId() != id){
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
-        }
+        }*/
         if(StringUtils.isBlank(dtoeducacion.getNombreE())){
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
